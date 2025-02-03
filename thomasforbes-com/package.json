@@ -1,0 +1,31 @@
+{
+  "name": "example-with-tailwindcss",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start"
+  },
+  "dependencies": {
+    "@fontsource-variable/fira-code": "^5.1.0",
+    "@fontsource/averia-sans-libre": "^5.1.0",
+    "@solidjs/router": "^0.15.0",
+    "@solidjs/start": "^1.0.10",
+    "autoprefixer": "^10.4.19",
+    "clsx": "^2.1.1",
+    "postcss": "^8.4.38",
+    "solid-js": "^1.9.2",
+    "solid-markdown": "^2.0.13",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss": "^3.4.3",
+    "vinxi": "^0.4.3",
+    "vite-plugin-solid-markdown": "^0.0.6"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "prettier": "^3.3.3"
+  }
+}

@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Virgil';
+  src: url('/Virgil.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  @apply bg-zinc-950 font-hand text-stone-300;
+}
+
+* {
+  transition-timing-function: cubic-bezier(0.58, 0, 0.38, 1.85);
+}
+
+p {
+  @apply font-hand;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display;
+}
+
+h4 {
+  @apply text-xl font-bold;
+}
+
+ul {
+  @apply list-inside list-[square];
+}
+
+.funky-decoration {
+  @apply underline decoration-dotted decoration-2 underline-offset-2 !duration-200 hover:skew-x-[5deg] hover:decoration-wavy hover:underline-offset-4;
+}
+
+.rainbow-decoration {
+  animation: change-border-color 4s ease infinite;
+}
+
+@keyframes change-border-color {
+  0% {
+    @apply decoration-sky-400;
+  }
+  25% {
+    @apply decoration-indigo-400;
+  }
+  75% {
+    @apply decoration-rose-500;
+  }
+  100% {
+    @apply decoration-sky-400;
+  }
+}
+
+.rainbow-text {
+  @apply !bg-clip-text text-transparent;
+  background: linear-gradient(
+    238deg,
+    theme('colors.sky.600') 0%,
+    theme('colors.indigo.500') 15%,
+    theme('colors.rose.500') 50%,
+    theme('colors.indigo.500') 85%,
+    theme('colors.sky.600') 100%
+  );
+  background-size: 400%;
+  animation: rainbow-text-animation 4s ease infinite;
+}
+
+@keyframes rainbow-text-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
